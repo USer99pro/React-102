@@ -5,7 +5,7 @@ const Productitem = (probs) => {
     <div className="product-item">
             <h3>{probs.name}</h3>
             <p>price : ${probs.price}</p>
-            <button onClick={probs.AddToCart} > Add to Card</button>
+            <button onClick={probs.onAddToCart} > Add to Card</button>
 
     </div>
   )

@@ -15,10 +15,6 @@ const AddProductFrom = (probs) => {
 
     }
 
-
-
-
-
   return (
     <div>
         <form onSubmit={handleSubmit} className="Add-product-form">
