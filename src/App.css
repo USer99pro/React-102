@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@200..1000&display=swap');
 body{
   margin: 0;
   padding: 0;
@@ -10,12 +11,12 @@ body{
   height: 100%;
 }
 .title{
-  font-size: 50px;
+  font-size: 50px bold !important;
   font-weight: 500;
   margin: 0;
   padding: 0;
   text-align: center;
-  text-decoration: inherit;
+  font-family: "Cairo Play", sans-serif;
   
 }
 .Add-product-form{
@@ -33,7 +34,7 @@ body{
   border-width: 2px;
   width: 50%; 
   padding: 5px;
-  height: 50px;
+  height: 4ช30px;
 
 }
 .Add-product-form button{
@@ -42,7 +43,6 @@ body{
   height: 50px;
   border-radius: 5px;
   border: 1px solid transparent;
-
 }
 .product-item{
   margin-bottom: 10px;
@@ -51,8 +51,8 @@ body{
 }
 .Product-grid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row: 1fr 1fr 1fr;
   justify-content: start;
   grid-gap: 10px;
   width: 100%;
