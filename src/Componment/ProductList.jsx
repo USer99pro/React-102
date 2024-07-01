@@ -5,7 +5,7 @@ import Productitem from "./Productitem";
 
 const ProductList = () => {
 
-    const [Products, setProducts] = useState([
+    const [products, setProducts] = useState([
         {
             id: 1,
             name: "Product 1",
@@ -29,17 +29,17 @@ const ProductList = () => {
     ])
     
     const handleAddProduct = (newProduct) => {
-        setProducts([...Products,
-            {id: Products.length + 1, ...newProduct},
+        setProducts([...products,
+            {id: products.length + 1, ...newProduct},
 
         ])
     };
 
-    const [cartItems,setcartItems] = useState([])
+    const [cartItems,setCartItems] = useState([])
 
 
-    const handleAddToCart = (product) => () => {
-        setcartItems([...cartItems, product])
+    const handleAddToCart = (product) => {
+        setCartItems([...cartItems, product])
     };
 
   return (
@@ -48,12 +48,12 @@ const ProductList = () => {
        <AddProductFrom onAddProduct={handleAddProduct} />
        <div className="Product-grid">
         {
-            Products.map((product) => (
+            products.map((product) => (
                 <Productitem
                     key = {product.id}
                     name = {product.name}
                     price = {product.price}
-                    onAddToCart={() => handleAddToCart(product)}
+                    onAddToCart ={ () => handleAddToCart(product)}
                 />
             ))
         }
@@ -67,7 +67,9 @@ const ProductList = () => {
                 {cartItems.map((item) => (
                     <li key={item.id}>
                         {item.name} ราคา {item.price} บาท
+                   
                     </li>
+                    
                 ))}
             </ul>
         )
