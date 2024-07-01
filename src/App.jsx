@@ -7,8 +7,13 @@ function App() {
 
   return (
     <>
-      <h1> MY Store </h1>
-      <ProductList />
+      <h1 className='title'> MY Store </h1>
+        <br />
+              <ProductList />
+
+    
+    
+     
     </>
   )
 }

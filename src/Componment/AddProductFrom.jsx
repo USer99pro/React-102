@@ -4,6 +4,8 @@ const AddProductFrom = (probs) => {
 
     const [name, setName] = useState("");
     const [price, setPrice] = useState("");
+
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -19,6 +21,7 @@ const AddProductFrom = (probs) => {
     <div>
         <form onSubmit={handleSubmit} className="Add-product-form">
             <input 
+                className="input"
                 type="text" 
                 placeholder="ชื่อสินค้า" 
                 value={name}
@@ -27,6 +30,7 @@ const AddProductFrom = (probs) => {
             />
 
             <input
+                className="input" 
                 type="number"    
                 placeholder="ราคา"
                 value={price}
